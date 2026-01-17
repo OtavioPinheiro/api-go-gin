@@ -13,7 +13,9 @@ func ExibeTodosAlunos(c *gin.Context) {
 	// 	"id":   "1",
 	// 	"nome": "Otávio Augusto",
 	// })
-	c.JSON(200, models.Alunos)
+	var alunos []models.Aluno
+	database.DB.Find(&alunos)
+	c.JSON(200, alunos)
 }
 
 func Saudacao(c *gin.Context) {

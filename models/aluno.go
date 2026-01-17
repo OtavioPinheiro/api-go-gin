@@ -9,4 +9,4 @@ type Aluno struct {
 	RG   string `json:"rg"`
 }
 
-var Alunos []Aluno
+// var Alunos []Aluno
